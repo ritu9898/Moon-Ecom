@@ -11,3 +11,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --white: #fff;
+  --body-bg: #f1f3f642;
+  --alert: darkseagreen;
+  --black: black;
+  --card-border: #e0e0e0;
+  --grey: grey;
+  --disable-color: #c2c2c2;
+  --disable-bg: #e0e0e0;
+  --main: linear-gradient(-90deg, #A3278F 0%, #E52F50 100%);
+  --forestgreen: forestgreen;
+  --ruler: #2874f0;
+  --login: rgb(11, 10, 12);
+  --yellow: yellow;
+  --sign-up-label: rgb(158, 154, 154);
+  --btn: rebeccapurple;
+  --text-color: #f2f2f2;
+  --dot: #bbb;
+  --dot-hover: #717171;
+  --border: #EBECF0;
+  --child-card: #f5f2f2;
+  --azure: azure;
+  --dark-grey: darkgrey;
+  --red: red;
+  --section: #f0f0f0;
+  --check: #c2c2c2;
+}
+
+body {
+  color: var(--white);
+  background-color: var(--body-bg);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.main-section {
+  display: flex;
+}
+
+.alert {
+  height: auto;
+  width: 30rem;
+  z-index: 1;
+  background-color: var(--alert);
+  margin: 1rem;
+  border-radius: 3px;
+  text-align: center;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.alert span {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.alert span:hover {
+  cursor: pointer;
+}
+
+.alert-box {
+  position: fixed;
+  top: 0rem;
+  display: none;
+  z-index: 2;
+}

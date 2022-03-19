@@ -1,0 +1,152 @@
+.row, .logo-row {
+  background-image: var(--main);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+}
+
+.search-bar {
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+}
+
+.search-bar input{
+  height: 2rem;
+  width: 20rem;
+  padding: 0 0.5rem;
+  border: 0;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar span i {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+#search-bar-append {
+  position: absolute;
+  background-color: var(--white);
+  color: var(--black);
+  height: auto;
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+  border: 1.4px solid var(--disable-color);
+  width: 23.3rem;
+  z-index: 1;
+  display: none;
+}
+
+#search-bar-append p {
+  margin: 0;
+  padding: 0;
+}
+
+#search-bar-append p a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login {
+  color: var(--btn);
+  height: 2rem;
+  width: 10rem;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.wishlist, .cart {
+  position: relative;
+}
+
+.wishlist i, .cart i {
+  font-size: 2rem;
+}
+
+.wishlist a, .cart a {
+  color: var(--white);
+}
+
+.badge {
+  position: absolute;
+  padding: 0rem;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: var(--black);
+  font-size: 12px;
+  aspect-ratio: 1/1;
+  text-align: center;
+}
+
+.wishlist .badge {
+  top: 0;
+  left: 1.5rem;
+}
+
+.cart .badge {
+  top: -0.3rem;
+  left: 1.7rem;
+}
+
+.logo {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.row .col button a, .logo-row .col button a {
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 860px) {
+  .row {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 625px) { 
+  .logo {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  #header {
+    min-width: max-content;
+  }
+}
+
+@media only screen and (max-width: 350px) {  
+  .main-section {
+    flex-direction: column;
+  }
+
+  .header .row{
+    flex-direction: unset;
+    padding: 1rem;
+    flex-wrap: wrap;
+    width: fit-content;
+  }
+
+  #header {
+    min-width: auto;
+  }
+
+  .child-card {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+
+  .child-card img {
+    height: 5rem !important;
+    width: 5rem !important;
+  }
+}
