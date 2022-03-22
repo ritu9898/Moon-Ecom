@@ -1,0 +1,146 @@
+.sign-up, .sign-in {
+  min-width: 40rem;
+  max-width: 50rem;
+  width: 40rem;
+  background: #fff;
+  border-radius: 4px;
+  margin: 5rem auto;
+  overflow: auto;
+  display: flex;
+  padding: 7rem 2rem;
+  background-image: var(--main);
+  font-family: Roboto,Arial,sans-serif;
+}
+
+.sign-up section, .sign-in section {
+  border-bottom: none;
+}
+
+.sign-up-img, .sign-in-img {
+  text-align: center;
+  font-size: 30px;
+  background-image: url('http://www.downloadclipart.net/large/makeup-png-transparent-image.png');
+  width: 20rem;
+}
+
+.sign-in-img {
+  width: 18rem;
+}
+
+.sign-up-form {
+  margin: 0 2rem;
+  position: relative;
+}
+
+.sign-up-form label {
+  padding:10px 20px;
+  position: absolute;;
+  top: 6px;
+  left: 0;
+  font-size:18px;
+  font-weight:400;
+  pointer-events: none;
+  transition:0.5s;
+}
+
+.sign-up-form input {
+  color:var(--black);
+  border:none;
+  border-bottom:1px solid rgb(228, 228, 228);
+  outline:none;
+  background:none;
+  transition: 0.5s;
+  margin-bottom:20px;
+  width:100%;
+  height: 40px; 
+}
+
+.sign-up-form .form-input input {
+  position: relative;
+  left:20px;
+  padding:10px 20px;
+} 
+
+.form-input {
+  position: relative;
+  margin-bottom: 34px;
+  font-size: 16px;
+}
+
+.ruler {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.ruler::before {
+  left: 50%;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+.ruler::after {
+  content: "";
+  height: 1px;
+  width: 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  bottom: 1px;
+  position: absolute;
+  will-change: transform;
+  background: var(--ruler);
+  transition: transform .2s ease;
+}
+
+.sign-up-form .form-input input:focus ~ input{
+  border-bottom:1px solid var(--ruler);
+  height: 40px; 
+}
+
+.sign-up-form .form-input input:focus ~ label 
+{
+  top:-20px;
+  font-size:14px;
+}
+
+.sign-up-img, .sign-in-img {
+  background-position:center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  background-size: cover;
+}
+
+.forgot-pwd {
+  position: absolute;
+  top: 140px;
+  left: 165px;
+  display:inline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#login, #sign-up {
+  color: var(--login);
+  height: 3rem;
+  width: 10rem;
+  border-radius: 4rem;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-button {
+  text-align: right;
+}
+
+.footer a{
+  color: var(--white) !important;
+  text-decoration: auto;
+}
+
+.form-input .footer {
+  position: absolute;
+  padding: 0 -5rem;
+  left: 22px;
+  top: 10px;
+}

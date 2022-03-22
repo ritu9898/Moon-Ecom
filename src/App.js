@@ -1,9 +1,12 @@
 import "./App.css";
+import AUthContextProvider from "./context/auth-context";
 import Header from "./pages/header";
 
 function App() {
   return (
-    <Header />
+    <AUthContextProvider>
+      <Header />
+    </AUthContextProvider>
   );
 }
 

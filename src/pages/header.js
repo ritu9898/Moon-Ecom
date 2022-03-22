@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import logo from '../assets/images/Moon-logos_black.png';
 import '../styles/header.css';
-import SignIn from "./sign_in";
+import SignIn from "./sign_in.jsx";
 
 export default function Header() {
   return(
