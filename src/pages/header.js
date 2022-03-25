@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import logo from '../assets/images/Moon-logos_black.png';
 import '../styles/header.css';
+import Products from "./products";
 import SignIn from "./sign_in";
 
 export default function Header() {
@@ -49,6 +50,7 @@ export default function Header() {
       </div>
       <Routes>
         <Route path="/auth/sign_in" element={<SignIn />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </div>
   );
