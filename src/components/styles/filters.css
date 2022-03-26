@@ -1,0 +1,58 @@
+.filters {
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+  color: var(--black);
+  margin: 0.5rem;
+  display: block;
+  width: 20rem;
+}
+
+.filters .title {
+  display: flex;
+}
+
+.filters .title a {
+  margin-top: 1.8rem;
+  margin-left: 9rem;
+}
+
+section {
+  border-bottom: 1px solid var(--section);
+}
+
+.price input, .brand input, .rating input, .discount input, .occasion input, .skin-type input {
+  margin-right: 1rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.check {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 1.4px solid var(--check);
+  border-radius: 1.5px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.price, .brand, .rating, .discount, .occasion, .skin-type {
+  position: relative;
+}
+
+.price span, .brand span, .rating span, .discount span, .occasion span, .skin-type span {
+  position: absolute;
+  top: 0rem;
+  left: 16rem;
+  cursor: pointer;
+}
+
+.rating .show-ratings i {
+  font-size: 12px;
+}
+
+.display-none {
+  display: none;
+}

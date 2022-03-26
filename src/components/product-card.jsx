@@ -13,7 +13,7 @@ export default class Card extends React.Component {
   render() {
     const list = products_list(products)
     return(
-     <div id="product">
+     <div class="products" id="product-listing">
       {list}
      </div>
     );
