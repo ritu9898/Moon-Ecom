@@ -1,5 +1,5 @@
 import React from "react";
-import { products } from "../backend/db/products";
+import { ProductContext } from "../context/product-context";
 import { products_list } from "../utils/fetch-products";
 
 export default class Card extends React.Component {
@@ -7,11 +7,11 @@ export default class Card extends React.Component {
     super();
   }
 
-  componentDidMount() {
-  }
+  static contextType = ProductContext;
 
   render() {
-    const list = products_list(products)
+    const list = products_list(this.context.products);
+    {console.log(this.context.products); console.log('IN card');}
     return(
      <div class="products" id="product-listing">
       {list}

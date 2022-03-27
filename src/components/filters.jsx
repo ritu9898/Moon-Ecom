@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { ProductContext } from "../context/product-context";
+
 export default function Filters() {
+
+  const contextType = useContext(ProductContext);
 
   function expandSpan(e) {
     if(e.target.parentElement.nodeName == "SPAN")
@@ -19,6 +24,16 @@ export default function Filters() {
     }
   }
 
+  function _handleClick(e) {
+    let value = e.target.value;
+    let name = e.target.name;
+    console.log(contextType.products);
+    contextType.products = contextType.products.filter(f => 
+      parseInt(f.price) == 1000);   
+      contextType.isChanged = true;
+      console.log(contextType.products); 
+  }
+
   return(
     <div class="filters" onClick={expandSpan}>
       <section class="title">
@@ -30,7 +45,7 @@ export default function Filters() {
         <span><i class="fa-solid fa-angle-down"></i></span>
         <div class="display-none">
           <div class="check-label">
-            <input type="checkbox" value="500" id="500" name="500" />
+            <input type="checkbox" value="500" id="500" name="price" onClick={_handleClick} />
             <label for="500"> 500 to 2000 </label>
           </div>
           <div>
