@@ -24,15 +24,7 @@ export default function Filters() {
     }
   }
 
-  function _handleClick(e) {
-    let value = e.target.value;
-    let name = e.target.name;
-    console.log(contextType.products);
-    contextType.products = contextType.products.filter(f => 
-      parseInt(f.price) == 1000);   
-      contextType.isChanged = true;
-      console.log(contextType.products); 
-  }
+
 
   return(
     <div class="filters" onClick={expandSpan}>
@@ -45,11 +37,11 @@ export default function Filters() {
         <span><i class="fa-solid fa-angle-down"></i></span>
         <div class="display-none">
           <div class="check-label">
-            <input type="checkbox" value="500" id="500" name="price" onClick={_handleClick} />
+            <input type="checkbox" value="500" id="500" name="price" onClick={contextType.filterFunction} />
             <label for="500"> 500 to 2000 </label>
           </div>
           <div>
-            <input type="checkbox" value="2000" /> 
+            <input type="checkbox" value="2000" name="price" onClick={contextType.filterFunction} /> 
             <label for="500"> 2000 to 4000 </label>
           </div>
           <div>
@@ -58,7 +50,7 @@ export default function Filters() {
           </div>
           <div>
             <input type="checkbox" value="6000" /> 
-            <label for="500" >= 6000 </label>
+            <label for="500"> <gt>{">"}</gt>= 6000 </label>
           </div>
         </div>
       </section>
@@ -67,12 +59,16 @@ export default function Filters() {
         <span><i class="fa-solid fa-angle-down"></i></span>
         <div class="show-brands display-none">
           <div>
-            <input type="checkbox" value="2000" /> 
-            <label for="500"> 2000 to 4000 </label>
+            <input type="checkbox" value="Lakme" name="brand" onClick={contextType.filterFunction} /> 
+            <label for="Lakme"> Lakme </label>
           </div>
           <div>
-            <input type="checkbox" value="4000" /> 
-            <label for="500"> 4000 to 6000 </label>
+            <input type="checkbox" value="L'Oréal" name="brand" onClick={contextType.filterFunction} /> 
+            <label for="L'Oréal"> L'Oréal </label>
+          </div>
+          <div>
+            <input type="checkbox" value="Maybelline" name="brand" onClick={contextType.filterFunction} /> 
+            <label for="Maybelline "> Maybelline  </label>
           </div>
         </div>
       </section>

@@ -19,7 +19,7 @@ export const products = [
     _id: uuid(),
     title: "Lipstic",
     price: "3000",
-    brand: "Lakme",
+    brand: "L'Oréal",
     image: "https://m.media-amazon.com/images/I/61AMPLdlUkL._SL1000_.jpg",
     categoryName: "party",
     quantity: "2"
@@ -32,5 +32,32 @@ export const products = [
     image: "https://m.media-amazon.com/images/I/61AMPLdlUkL._SL1000_.jpg",
     categoryName: "casual",
     quantity: "0"
+  },
+  {
+    _id: uuid(),
+    title: "Blush",
+    price: "2000",
+    brand: "L'Oréal",
+    image: "https://m.media-amazon.com/images/I/61AMPLdlUkL._SL1000_.jpg",
+    categoryName: "no-makeup",
+    quantity: "2"
+  },
+  {
+    _id: uuid(),
+    title: "Blush",
+    price: "1000",
+    brand: "Maybelline",
+    image: "https://m.media-amazon.com/images/I/61AMPLdlUkL._SL1000_.jpg",
+    categoryName: "no-makeup",
+    quantity: "2"
+  },
+  {
+    _id: uuid(),
+    title: "Blush",
+    price: "3000",
+    brand: "Maybelline",
+    image: "https://m.media-amazon.com/images/I/61AMPLdlUkL._SL1000_.jpg",
+    categoryName: "no-makeup",
+    quantity: "2"
   },
 ];
