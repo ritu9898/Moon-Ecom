@@ -32,6 +32,24 @@ export default function Filters() {
         <h2>Filters</h2>
         <a>Clear All</a>
       </section>
+      <section className="item">
+        <h4>Products</h4>
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-brands display-none">
+          <div>
+            <input type="checkbox" value="Blush" name="item" onClick={contextType.filterFunction} /> 
+            <label htmlFor="Blush"> Blush </label>
+          </div>
+          <div>
+            <input type="checkbox" value="Lipstic" name="item" onClick={contextType.filterFunction} /> 
+            <label htmlFor="Lipstic"> Lipstic </label>
+          </div>
+          <div>
+            <input type="checkbox" value="Foundation" name="item" onClick={contextType.filterFunction} /> 
+            <label htmlFor="Foundation "> Foundation  </label>
+          </div>
+        </div>
+      </section>
       <section className="price">
         <h4>Price</h4>
         <span><i className="fa-solid fa-angle-down"></i></span>

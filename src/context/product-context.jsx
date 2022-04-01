@@ -42,8 +42,14 @@ export default class ProductContextProvider extends React.Component {
             isChanged: true
           })
           break;
+        case 'item':
+          this.setState({
+            products: this.state.products.filter(f => 
+            f.title == value),
+            isChanged: true
+          })
+          break;
         default: 
-          
       }
     }
     else {
