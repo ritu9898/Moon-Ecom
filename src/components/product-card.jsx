@@ -13,7 +13,7 @@ export default class Card extends React.Component {
     const list = products_list(this.context.products);
     {console.log(this.context.products); console.log('IN card');}
     return(
-     <div class="products" id="product-listing">
+     <div className="products" id="product-listing">
       {list}
      </div>
     );

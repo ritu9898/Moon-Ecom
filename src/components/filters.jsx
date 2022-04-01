@@ -27,156 +27,156 @@ export default function Filters() {
 
 
   return(
-    <div class="filters" onClick={expandSpan}>
-      <section class="title">
+    <div className="filters" onClick={expandSpan}>
+      <section className="title">
         <h2>Filters</h2>
         <a>Clear All</a>
       </section>
-      <section class="price">
+      <section className="price">
         <h4>Price</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="display-none">
-          <div class="check-label">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="display-none">
+          <div className="check-label">
             <input type="checkbox" value="500" id="500" name="price" onClick={contextType.filterFunction} />
-            <label for="500"> 500 to 2000 </label>
+            <label htmlFor="500"> 500 to 2000 </label>
           </div>
           <div>
             <input type="checkbox" value="2000" name="price" onClick={contextType.filterFunction} /> 
-            <label for="500"> 2000 to 4000 </label>
+            <label htmlFor="500"> 2000 to 4000 </label>
           </div>
           <div>
             <input type="checkbox" value="4000" /> 
-            <label for="500"> 4000 to 6000 </label>
+            <label htmlFor="500"> 4000 to 6000 </label>
           </div>
           <div>
             <input type="checkbox" value="6000" /> 
-            <label for="500"> <gt>{">"}</gt>= 6000 </label>
+            <label htmlFor="500"> = 6000 </label>
           </div>
         </div>
       </section>
-      <section class="brand">
+      <section className="brand">
         <h4>Brands</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="show-brands display-none">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-brands display-none">
           <div>
             <input type="checkbox" value="Lakme" name="brand" onClick={contextType.filterFunction} /> 
-            <label for="Lakme"> Lakme </label>
+            <label htmlFor="Lakme"> Lakme </label>
           </div>
           <div>
             <input type="checkbox" value="L'Oréal" name="brand" onClick={contextType.filterFunction} /> 
-            <label for="L'Oréal"> L'Oréal </label>
+            <label htmlFor="L'Oréal"> L'Oréal </label>
           </div>
           <div>
             <input type="checkbox" value="Maybelline" name="brand" onClick={contextType.filterFunction} /> 
-            <label for="Maybelline "> Maybelline  </label>
+            <label htmlFor="Maybelline "> Maybelline  </label>
           </div>
         </div>
       </section>
-      <section class="rating">
+      <section className="rating">
         <h4>Customer Ratings</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="show-ratings display-none">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-ratings display-none">
           <div>
             <input type="checkbox" value="4" /> 
-            <label for="4"> 4 <i class="fa-solid fa-star"></i> and above </label>
+            <label htmlFor="4"> 4 <i className="fa-solid fa-star"></i> and above </label>
           </div>
           <div>
             <input type="checkbox" value="3" /> 
-            <label for="3"> 3 <i class="fa-solid fa-star"></i> and above </label>
+            <label htmlFor="3"> 3 <i className="fa-solid fa-star"></i> and above </label>
           </div>
           <div>
             <input type="checkbox" value="2" /> 
-            <label for="2"> 2 <i class="fa-solid fa-star"></i> and above </label>
+            <label htmlFor="2"> 2 <i className="fa-solid fa-star"></i> and above </label>
           </div>
           <div>
             <input type="checkbox" value="1" /> 
-            <label for="1"> 1 <i class="fa-solid fa-star"></i> and above </label>
+            <label htmlFor="1"> 1 <i className="fa-solid fa-star"></i> and above </label>
           </div>
         </div>
       </section>
-      <section class="discount">
+      <section className="discount">
         <h4>Discounts</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="show-discounts display-none">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-discounts display-none">
           <div>
             <input type="checkbox" value="20" /> 
-            <label for="20"> 20% and more </label>
+            <label htmlFor="20"> 20% and more </label>
           </div>
           <div>
             <input type="checkbox" value="50" /> 
-            <label for="50"> 50% and more </label>
+            <label htmlFor="50"> 50% and more </label>
           </div>
           <div>
             <input type="checkbox" value="60" /> 
-            <label for="60"> 60% and more </label>
+            <label htmlFor="60"> 60% and more </label>
           </div>
         </div>
       </section>
-      <section class="occasion">
+      <section className="occasion">
         <h4>Occasion</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="show-occasions display-none">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-occasions display-none">
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Party & Festive </label>
+            <label htmlFor=""> Party & Festive </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Wedding & Festive </label>
+            <label htmlFor=""> Wedding & Festive </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Bridal </label>
+            <label htmlFor=""> Bridal </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Day Look </label>
+            <label htmlFor=""> Day Look </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Work Look </label>
+            <label htmlFor=""> Work Look </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> No Makeup Look </label>
+            <label htmlFor=""> No Makeup Look </label>
           </div>
         </div>
       </section>
-      <section class="skin-type">
+      <section className="skin-type">
         <h4>Skin Types</h4>
-        <span><i class="fa-solid fa-angle-down"></i></span>
-        <div class="show-skin-types display-none">
+        <span><i className="fa-solid fa-angle-down"></i></span>
+        <div className="show-skin-types display-none">
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Normal </label>
+            <label htmlFor=""> Normal </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Sensitive </label>
+            <label htmlFor=""> Sensitive </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Dry </label>
+            <label htmlFor=""> Dry </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Oily </label>
+            <label htmlFor=""> Oily </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Combination(Both dry and oily) </label>
+            <label htmlFor=""> Combination(Both dry and oily) </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Scaly </label>
+            <label htmlFor=""> Scaly </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Red Spots </label>
+            <label htmlFor=""> Red Spots </label>
           </div>
           <div>
             <input type="checkbox" value="" /> 
-            <label for=""> Skin Moles </label>
+            <label htmlFor=""> Skin Moles </label>
           </div>
         </div>
       </section>
