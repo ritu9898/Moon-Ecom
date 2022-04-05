@@ -1,73 +1,45 @@
 import { products } from "../backend/db/products";
-import React, { createContext } from "react";
+import React, { createContext, useReducer, useState } from "react";
 
 export const ProductContext = createContext();
 
-export default class ProductContextProvider extends React.Component {
-  constructor() {
-    super();
-    this.filterFunction = this.filterFunction.bind(this);
-    this.state = {
-      initialProducts: products,
-      products: products,
-      isChanged: false,
-      filterFunction: this.filterFunction
+export default function ProductContextProvider(props) {
+
+  const state1 = {
+    initialProducts: products,
+    productsData: products,
+    isChanged: false,
+    filterFunction: filterFunction
+  }
+
+  const [initialstate, dispatch] = useReducer(reducer, state1);
+
+  function reducer(state, action) {
+    var newState;
+    switch (action.type) {
+      case 'price':
+        return {...state, productsData: state.productsData.filter(f => 
+          parseInt(f.price) >= parseInt(action.payload) + 1000)};
+            
+      case 'brand':
+        return {...state, productsData: state.productsData.filter(f => 
+          f.brand === action.payload)};
+      default:
+        return {...state}
     }
   }
 
-  filterFunction(e) {
+  function filterFunction(e) {
     console.log('FilterFunction');
-    // this.setState({
-    //   products: {...this.state.initialProducts}
-    // })
-    this.state.products = this.state.initialProducts;
-    let value = e.target.value;
+    let v = e.target.value;
     let checked = e.target.checked;
     let name = e.target.name;
-    console.log(value);
-    if(checked) {
-      switch(name) {
-        case 'price': 
-          value = parseInt(value);
-          this.setState({
-            products: this.state.products.filter(f => 
-            parseInt(f.price) >= value && parseInt(f.price) <= value + 1000),
-            isChanged: true
-          })
-          break;
-        case 'brand':
-          this.setState({
-            products: this.state.products.filter(f => 
-            f.brand == value),
-            isChanged: true
-          })
-          break;
-        case 'item':
-          this.setState({
-            products: this.state.products.filter(f => 
-            f.title == value),
-            isChanged: true
-          })
-          break;
-        default: 
-      }
-    }
-    else {
-      this.state.products = this.state.initialProducts;
-      this.setState({
-        products: this.state.products,
-        isChanged: true
-      })
-    }
-    this.state.isChanged = true;
+    dispatch({type: name, payload: v});
   }
-
-  render() {
 
     return(
-      <ProductContext.Provider value={{...this.state, ...this.filterFunction}}>
-        {this.props.children}
+      <ProductContext.Provider value={{...initialstate, dispatch, ...filterFunction}}>
+        {props.children}
       </ProductContext.Provider>
     );
-  }
 }

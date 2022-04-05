@@ -2,6 +2,7 @@
 @import url('./styles/home.css');
 @import url('./styles/products.css');
 @import url('./components/styles/filters.css');
+@import url('./styles/productDetail.css');
 
 body {
   margin: 0;

@@ -10,8 +10,7 @@ export default class Card extends React.Component {
   static contextType = ProductContext;
 
   render() {
-    const list = products_list(this.context.products);
-    {console.log(this.context.products); console.log('IN card');}
+    const list = products_list(this.context.productsData);
     return(
      <div className="products" id="product-listing">
       {list}
