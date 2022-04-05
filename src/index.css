@@ -1,3 +1,9 @@
+@import url('./styles/header.css');
+@import url('./styles/home.css');
+@import url('./styles/products.css');
+@import url('./components/styles/filters.css');
+@import url('./styles/productDetail.css');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black !important;
 }
 
 code {
