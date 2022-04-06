@@ -1,6 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import { products } from "../backend/db/products";
+import { useContext } from "react";
 import "../styles/productDetail.css";
+import { WishlistContext } from "../context/wishlist-context";
+import { addRemoveWishlist } from "../backend/utils/handleWishlist";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -10,7 +13,8 @@ export default function ProductDetail() {
   }
 
   const product = getProductDetails(products, productId);
-
+  const {wishlistProducts, setWishlistProducts} = useContext(WishlistContext);
+ 
   return(
     <>
       <Link to="/products"> See All </Link>
@@ -25,7 +29,7 @@ export default function ProductDetail() {
           <div className="card">
             <img src={product.image} className="product-img"  />
             <div className="icons">
-              <div className="heart">
+              <div className="heart" onClick={() => {addRemoveWishlist(product, wishlistProducts, setWishlistProducts) }}>
               </div>
               <div className="add-to-cart">
                 <i className="fa-solid fa-cart-shopping"></i>
