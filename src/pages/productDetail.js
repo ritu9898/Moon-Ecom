@@ -4,6 +4,9 @@ import { useContext } from "react";
 import "../styles/productDetail.css";
 import { WishlistContext } from "../context/wishlist-context";
 import { addRemoveWishlist } from "../backend/utils/handleWishlist";
+import { CartContext } from "../context/cart-context";
+import "../styles/productDetail.css";
+import { addRemoveCart } from "../backend/utils/handleCart";
 
 export default function ProductDetail() {
   const { productId } = useParams();
@@ -13,8 +16,9 @@ export default function ProductDetail() {
   }
 
   const product = getProductDetails(products, productId);
-  const {wishlistProducts, setWishlistProducts} = useContext(WishlistContext);
- 
+  const { wishlistProducts, setWishlistProducts } = useContext(WishlistContext);
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+
   return(
     <>
       <Link to="/products"> See All </Link>
@@ -31,7 +35,7 @@ export default function ProductDetail() {
             <div className="icons">
               <div className="heart" onClick={() => {addRemoveWishlist(product, wishlistProducts, setWishlistProducts) }}>
               </div>
-              <div className="add-to-cart">
+              <div className="add-to-cart" onClick={() => addRemoveCart(product, cartProducts, setCartProducts)}>
                 <i className="fa-solid fa-cart-shopping"></i>
               </div>
             </div>

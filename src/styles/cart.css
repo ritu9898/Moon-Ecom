@@ -1,0 +1,143 @@
+.main-section-cart {
+  display: flex;
+  color: var(--black);
+  position: relative;
+}
+
+#cart-details {
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+  color: var(--black);
+  margin: 0.5rem;
+  display: block;
+  width: auto;
+  margin: 1rem;
+  padding: 1rem;
+  flex-shrink: 1;
+}
+
+#cart-details .product-cart {
+  display: flex;
+  width: 50rem;
+  border-bottom: 1px solid var(--card-border);
+  margin: 1rem 0;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+#cart-details .product-cart .desc {
+  flex-grow: 1;
+}
+
+#cart-details .product-cart .desc p:nth-child(2) {
+  color: var(--grey);
+}
+
+#cart-details .product-cart img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.product-cart .add-more {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.product-cart .add-more .minus, .product-cart .add-more .plus {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  border: 1px solid var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.minus:hover, .plus:hover {
+  cursor: pointer;
+}
+
+.product-cart .add-more .number {
+  height: 2rem;
+  width: 3rem;
+  border: 1px solid var(--grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus-disable {
+  color: var(--disable-color);
+  border-color: var(--disable-bg);
+  cursor: auto !important;
+}
+
+.desc .save-later {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.save-later h5 {
+  cursor: pointer;
+}
+
+.place-order {
+  display: flex;
+  justify-content: flex-end;
+  width: 50rem;
+  border-bottom: 1px solid var(--disable-bg);
+  margin: 1rem 0;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid rgb(240, 240, 240);
+  background: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  box-shadow: rgb(0 0 0 / 10%) 0px -2px 10px 0px;
+}
+
+.place-order button {
+  padding: 1rem 5rem;
+  background-image: var(--main);
+  color: var(--white);
+  cursor: pointer;
+  border: 0;
+  font-size: 20px;
+}
+
+#bill-details {
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+  color: var(--black);
+  margin: 0.5rem;
+  display: block;
+  width: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+  position: sticky;
+  top: 5rem;
+  bottom: 0;
+  height: 20rem;
+}
+
+.bill {
+  display: flex;
+  flex-direction: column;
+}
+
+.bill p span {
+  float: right;
+}
+
+.free-delivery {
+  color: var(--forestgreen);
+}
+
+.total-price {
+  padding: 1rem 0;
+  border-bottom: 1px dotted;
+  border-top: 1px dotted;
+}
