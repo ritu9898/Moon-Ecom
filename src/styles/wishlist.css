@@ -1,0 +1,56 @@
+#wishlist #sidebar, #wishlist .wishlist-body {
+  box-shadow: 0 1px 8px 0 rgb(0 0 0 / 6%);
+  color: var(--black);
+  margin: 0.5rem;
+  display: block;
+  width: auto;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+#wishlist #sidebar .profile {
+  display: flex;
+  gap: 2rem;
+}
+
+#wishlist #sidebar .profile .avatar {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+
+#wishlist #sidebar .profile-details p {
+  padding: 1rem;
+  color: var(--grey);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.wishlist-body .product-card {
+  display: flex;
+  width: 50rem;
+  border-bottom: 1px solid var(--card-border);
+  margin: 2rem 0;
+}
+
+.wishlist-body .product-card img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.wishlist-body .product-card .desc {
+  padding: 1rem;
+  margin: 1rem;
+  flex-grow: 1;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: var(--grey);
+}
+
+.wishlist-body .product-card .desc .price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

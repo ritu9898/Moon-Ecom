@@ -1,21 +1,22 @@
 import React from "react";
 import {
-  Routes,
-  Route,
   Link
 } from "react-router-dom";
+import { useContext } from "react";
 import logo from '../assets/images/Moon-logos_black.png';
 import '../styles/header.css';
-import ProductDetail from "./productDetail";
-import Products from "./products";
-import SignIn from "./sign_in";
+import { WishlistContext } from "../context/wishlist-context";
+
 
 export default function Header() {
+  const {wishlistProducts, setWishlistProducts} = useContext(WishlistContext);
   return(
     <div>
       <div className="logo-row">
         <div className="col">
-          <a href="../index.html"><img src={logo} className="logo" /></a>
+          <Link to="/products" >
+            <img src={logo} className="logo" />
+          </Link>
         </div>
         <div className="row">
           <div className="col">
@@ -33,10 +34,10 @@ export default function Header() {
           </div>
           <div className="col">
             <div className="wishlist">
-              <a href="../components/wishlist.html">
+              <Link to="/wishlist">
                 <i className="fa-solid fa-heart"></i>
-                <span className="badge">6</span>
-              </a>
+                <span className="badge">{wishlistProducts.length}</span>
+              </Link>
             </div>
           </div>
           <div className="col">
@@ -49,11 +50,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <Routes>
-        <Route path="/auth/sign_in" element={<SignIn />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:productId" element={<ProductDetail />} />
-      </Routes>
     </div>
   );
 }
