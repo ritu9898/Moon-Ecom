@@ -14,7 +14,7 @@ export default function Header() {
   const { cartProducts, setCartProducts } = useContext(CartContext);
   
   return(
-    <div>
+    <div id="header">
       <div className="logo-row">
         <div className="col">
           <Link to="/products" >

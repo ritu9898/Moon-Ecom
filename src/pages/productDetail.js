@@ -18,6 +18,8 @@ export default function ProductDetail() {
   const product = getProductDetails(products, productId);
   const { wishlistProducts, setWishlistProducts } = useContext(WishlistContext);
   const { cartProducts, setCartProducts } = useContext(CartContext);
+  var isWishlisted = wishlistProducts.filter((g) => g._id === product._id ).length;
+  var hasAddedToCart = cartProducts.filter((g) => g._id === product._id ).length;
 
   return(
     <>
@@ -33,11 +35,27 @@ export default function ProductDetail() {
           <div className="card">
             <img src={product.image} className="product-img"  />
             <div className="icons">
-              <div className="heart" onClick={() => {addRemoveWishlist(product, wishlistProducts, setWishlistProducts) }}>
-              </div>
-              <div className="add-to-cart" onClick={() => addRemoveCart(product, cartProducts, setCartProducts)}>
+            {isWishlisted > 0 ? (
+              <div className="heart is-active" onClick={(e) => {addRemoveWishlist(product, wishlistProducts, setWishlistProducts);
+              e.target.classList.toggle('is-active');
+              }}> </div>) : (
+              <div className="heart" onClick={(e) => {addRemoveWishlist(product, wishlistProducts, setWishlistProducts);
+              e.target.classList.toggle('is-active');
+              }}> </div>
+            )}
+            {hasAddedToCart > 0 ? (
+              <div className="add-to-cart add-to-cart-color" onClick={(e) => {addRemoveCart(product, cartProducts, setCartProducts);
+              e.target.parentElement.classList.toggle('add-to-cart-color');
+              }}>
                 <i className="fa-solid fa-cart-shopping"></i>
               </div>
+            ) : (
+              <div className="add-to-cart" onClick={(e) => {addRemoveCart(product, cartProducts, setCartProducts);
+              e.target.parentElement.classList.toggle('add-to-cart-color');
+              }}>
+                <i className="fa-solid fa-cart-shopping"></i>
+              </div>
+            )}
             </div>
           </div>
           <div className="details">
