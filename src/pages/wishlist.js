@@ -34,7 +34,7 @@ export default function Wishlist() {
             { 
               wishlistProducts.map((w) => {
                 return(
-                  <div className="product-card">
+                  <div className="product-card" key={w._id}>
                     <img  src={w.image}/>
                     <div className="desc">
                       <p>Beauty Product by Moon </p> 

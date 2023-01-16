@@ -6,12 +6,15 @@ import { useContext } from "react";
 import logo from '../assets/images/Moon-logos_black.png';
 import '../styles/header.css';
 import { WishlistContext } from "../context/wishlist-context";
+import { CartContext } from "../context/cart-context";
 
 
 export default function Header() {
   const {wishlistProducts, setWishlistProducts} = useContext(WishlistContext);
+  const { cartProducts, setCartProducts } = useContext(CartContext);
+  
   return(
-    <div>
+    <div id="header">
       <div className="logo-row">
         <div className="col">
           <Link to="/products" >
@@ -42,10 +45,10 @@ export default function Header() {
           </div>
           <div className="col">
             <div className="cart">
-              <a href="../components/cart.html">
+              <Link to="/cart">
                 <i className="fa-solid fa-cart-shopping"></i>
-                <span className="badge">23</span>
-              </a>
+                <span className="badge">{cartProducts.length}</span>
+              </Link>
             </div>
           </div>
         </div>
